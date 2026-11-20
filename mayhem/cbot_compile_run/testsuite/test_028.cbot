@@ -1,0 +1,67 @@
+
+        extern void Comparations()
+        {
+            ASSERT(1 != 0);
+            ASSERT(1 == 1);
+            ASSERT(1 > 0);
+            ASSERT(1 >= 0);
+            ASSERT(1 >= 1);
+            ASSERT(0 < 1);
+            ASSERT(0 <= 1);
+            ASSERT(1 <= 1);
+        }
+        
+        extern void BasicMath()
+        {
+            ASSERT(2+2 == 4);
+            ASSERT(4-2 == 2);
+            ASSERT(2*2 == 4);
+            ASSERT(2/2 == 1);
+            ASSERT(5%2 == 1);
+            ASSERT(5**3 == 125);
+        }
+        
+        extern void BitwiseMath()
+        {
+            ASSERT((1 << 5) == 32);
+            ASSERT((32 >> 5) == 1);
+            ASSERT((3 & 2) == 2);
+            ASSERT((1 & 2) == 0);
+            ASSERT((1 | 2) == 3);
+            ASSERT((2 | 2) == 2);
+            ASSERT((5 ^ 3) == 6);
+            ASSERT((~1024) == -1025);
+        }
+        
+        extern void BooleanLogic()
+        {
+            ASSERT(true);
+            ASSERT(!false);
+            ASSERT(true && true);
+            ASSERT(!(true && false));
+            ASSERT(!(false && true));
+            ASSERT(!(false && false));
+            ASSERT(true || true);
+            ASSERT(true || false);
+            ASSERT(false || true);
+            ASSERT(!(false || false));
+            ASSERT(!(true ^ true));
+            ASSERT(true ^ false);
+            ASSERT(false ^ true);
+            ASSERT(!(false ^ false));
+        }
+        
+        extern void NumberFormats()
+        {
+            ASSERT(2.0 == 2);
+            ASSERT(2.00000 == 2);
+            ASSERT(2.50000 == 2.5);
+            ASSERT(-2.0 == -2);
+            ASSERT(2e3 == 2000);
+            ASSERT(-2e3 == -2000);
+            ASSERT(2e-3 == 0.002);
+            ASSERT(-2e-3 == -0.002);
+            ASSERT(0xFF == 255);
+            ASSERT(0xAB == 171);
+        }
+    

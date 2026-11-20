@@ -1,0 +1,10 @@
+
+        extern void TestCompileErrorInFinally() {
+            try {
+                5/0;
+            } finally {
+                1 - "hello";
+            }
+            ASSERT(false);
+        }
+        

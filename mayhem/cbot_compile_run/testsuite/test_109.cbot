@@ -1,0 +1,9 @@
+
+        extern void TestArrayInitialization() {
+            int[] a = {1, 2, 3};
+            ASSERT(sizeof(a) == 3);
+            ASSERT(a[0] == 1);
+            ASSERT(a[1] == 2);
+            ASSERT(a[2] == 3);
+        }
+    

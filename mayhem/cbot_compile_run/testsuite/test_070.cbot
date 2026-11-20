@@ -1,0 +1,6 @@
+
+        public class TestClass {
+            int ~TestClass() {}
+        }
+        extern void DestructorReturnTypeVoid() {}
+        

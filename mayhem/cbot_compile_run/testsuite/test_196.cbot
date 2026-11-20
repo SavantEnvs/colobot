@@ -1,0 +1,15 @@
+
+        extern void TestCatchExecutedOnError() {
+            bool caught = false;
+            bool tried = false;
+            try {
+                tried = true;
+                5/0;
+                ASSERT(false);
+            } catch(CBotErrZeroDiv) {
+                caught = true;
+            }
+            ASSERT(caught == true);
+            ASSERT(tried == true);
+        }
+    

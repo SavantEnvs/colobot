@@ -1,0 +1,6 @@
+
+        extern void ParamDefaultBadType() {
+        }
+        void Test(int i = 1, float f = null) {}
+        
+        

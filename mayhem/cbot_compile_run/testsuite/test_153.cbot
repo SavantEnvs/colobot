@@ -1,0 +1,22 @@
+
+        public class BaseClass {
+            private int a_private = 2;
+        
+            bool test() {
+                a_private = 2;
+                int a = a_private;
+                return true;
+            }
+            bool NoErrorPrivateSameClass() {
+                BaseClass b = new BaseClass();
+                int a = b.a_private;
+                b.a_private = 2;
+                return true;
+            }
+        }
+        extern void Test() {
+            BaseClass b();
+            ASSERT(true == b.test());
+            ASSERT(true == b.NoErrorPrivateSameClass());
+        }
+    

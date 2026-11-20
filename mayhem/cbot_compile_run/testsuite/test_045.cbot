@@ -1,0 +1,12 @@
+
+        extern void LimitedArrayTest()
+        {
+            int a[5];
+            ASSERT(sizeof(a) == 0);
+            a[0] = 1;
+            ASSERT(sizeof(a) == 1);
+            a[4] = 1;
+            ASSERT(sizeof(a) == 5);
+            a[5] = 1;
+        }
+        

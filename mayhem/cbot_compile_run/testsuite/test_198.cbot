@@ -1,0 +1,16 @@
+
+        void divzero() {5/0;}
+        extern void TestCatchFromOtherFunction() {
+            bool caught = false;
+            bool tried = false;
+            try {
+                tried = true;
+                divzero();
+                ASSERT(false);
+            } catch(CBotErrZeroDiv) {
+                caught = true;
+            }
+            ASSERT(caught == true);
+            ASSERT(tried == true);
+        }
+    

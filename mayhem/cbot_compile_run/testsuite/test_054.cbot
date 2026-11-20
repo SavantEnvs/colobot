@@ -1,0 +1,10 @@
+
+        int func()
+        {
+            return "test";
+        }
+        extern void FunctionBadReturn()
+        {
+            int a = func();
+        }
+        

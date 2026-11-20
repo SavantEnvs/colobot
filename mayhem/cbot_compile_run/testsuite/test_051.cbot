@@ -1,0 +1,16 @@
+
+        int func(string test)
+        {
+            return 1;
+        }
+        int func(int test)
+        {
+            return 2;
+        }
+        
+        extern void FunctionOverloading()
+        {
+            ASSERT(func("5") == 1);
+            ASSERT(func(5) == 2);
+        }
+    

@@ -1,0 +1,6 @@
+extern void ClassToString_2()
+{
+    string s = new TestClass;
+    ASSERT(s == "Pointer to TestClass(  )");
+}
+public class TestClass { /* no fields */ }

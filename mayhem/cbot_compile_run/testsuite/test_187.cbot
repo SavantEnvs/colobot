@@ -1,0 +1,16 @@
+
+        public class BaseClass {
+            private bool BaseClassPrivate() {
+                return true;
+            }
+            bool NoErrorPrivateSameClass() {
+                BaseClass b();
+                ASSERT(true == b.BaseClassPrivate());
+                return BaseClassPrivate();
+            }
+        }
+        extern void Test() {
+            BaseClass b();
+            ASSERT(true == b.NoErrorPrivateSameClass());
+        }
+    

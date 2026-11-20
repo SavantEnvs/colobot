@@ -1,0 +1,14 @@
+
+        public class SubClass extends BaseClass {
+            bool testProtected() {
+                a_protected = 1;
+                int a = a_protected;
+                return true;
+            }
+        }
+        extern void TestSubClassAccessProtected() {
+            SubClass  s();
+            ASSERT(true == s.test());
+            ASSERT(true == s.testProtected());
+        }
+    

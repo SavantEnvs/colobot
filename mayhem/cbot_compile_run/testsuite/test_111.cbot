@@ -1,0 +1,12 @@
+
+        extern void TestArrayInitializationSmallerThanRange() {
+            int a[4] = {1, 2, 3};
+            ASSERT(sizeof(a) == 3);
+            ASSERT(a[0] == 1);
+            ASSERT(a[1] == 2);
+            ASSERT(a[2] == 3);
+            a[3] = 4;
+            ASSERT(sizeof(a) == 4);
+            ASSERT(a[3] == 4);
+        }
+    

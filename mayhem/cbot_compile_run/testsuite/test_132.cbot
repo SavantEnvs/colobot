@@ -1,0 +1,13 @@
+
+        public class TestClass {
+            int x = 123;
+            static bool b = false;
+            void ~TestClass() { b = true; }
+        }
+        TestClass GetNewObject() { return new TestClass(); }
+        extern void TestAccessMemberNewObject() {
+            TestClass tc();
+            ASSERT(123 == GetNewObject().x);
+            ASSERT(tc.b == true);
+        }
+    

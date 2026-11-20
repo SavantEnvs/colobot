@@ -1,0 +1,6 @@
+
+        public class TestClass {
+            int i = 1;
+            int i = 2;
+        }
+        

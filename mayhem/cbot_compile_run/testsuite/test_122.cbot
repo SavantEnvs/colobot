@@ -1,0 +1,10 @@
+
+        public class TestClass { int x; }
+        TestClass GetObject(TestClass t) {
+            return t;
+        }
+        extern void TestAccessMemberVarUndefined() {
+            TestClass tc();
+            GetObject(tc).x;
+        }
+        

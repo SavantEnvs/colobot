@@ -1,0 +1,9 @@
+
+        bool Test(int i, float f) { return false; }
+        bool Test(float f, int i) { return false; }
+        bool Test(int i, int ii)  { return true; }
+        
+        extern void NoErrorMoreSpecific() {
+            ASSERT(true == Test(1, 2));
+        }
+    

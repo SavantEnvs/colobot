@@ -1,0 +1,5 @@
+
+        extern void WrongType() {
+            repeat ("not number");
+        }
+        

@@ -1,0 +1,6 @@
+
+        extern void TestPublic()
+        {
+            ASSERT(test() == 1337);
+        }
+    

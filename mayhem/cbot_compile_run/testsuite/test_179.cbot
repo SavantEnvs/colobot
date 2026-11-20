@@ -1,0 +1,18 @@
+
+        extern void TestFromOtherProgram()
+        {
+            TestClass tc();
+            ASSERT(123 == tc.InsideClass());
+            ASSERT(456 == tc.PublicMethod());
+            ASSERT(789 == tc.MethodInThisProgram());
+        }
+        int TestClass::MethodInThisProgram()
+        {
+            ASSERT(123 == InsideClass());
+            ASSERT(456 == PublicMethod());
+            ASSERT(123 == this.InsideClass());
+            ASSERT(456 == this.PublicMethod());
+            ASSERT(i == 123 && this.j == 456);
+            return this.k;
+        }
+    

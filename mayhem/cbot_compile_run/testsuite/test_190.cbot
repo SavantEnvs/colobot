@@ -1,0 +1,6 @@
+
+        extern void TestErrorPrivate_1() {
+            BaseClass b();
+            b.BaseClassPrivate();
+        }
+        

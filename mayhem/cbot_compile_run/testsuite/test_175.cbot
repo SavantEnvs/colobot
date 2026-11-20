@@ -1,0 +1,7 @@
+
+        extern void TestCallWithoutObject()
+        {
+            TestMethod();
+        }
+        public void TestClass::TestMethod() {}
+        

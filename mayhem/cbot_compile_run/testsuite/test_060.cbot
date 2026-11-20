@@ -1,0 +1,6 @@
+
+        extern void TestPublicRemoved()
+        {
+            ASSERT(test() == 1337);
+        }
+        

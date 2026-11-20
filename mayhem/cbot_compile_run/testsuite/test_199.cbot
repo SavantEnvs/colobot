@@ -1,0 +1,12 @@
+
+        void divzero() {5/0;}
+        extern void TestCatchOnlyOneErrorTypeFromOtherFunction() {
+            try {
+                divzero();
+                ASSERT(false);
+            } catch(CBotErrNull) {
+                ASSERT(false);
+            }
+            ASSERT(false);
+        }
+        

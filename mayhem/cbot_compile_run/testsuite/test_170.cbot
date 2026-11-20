@@ -1,0 +1,8 @@
+
+        extern void DefaultValuesAmbiguousCall() {
+            Test();
+        }
+        void Test(int i = 1) {}
+        void Test(float f = 2.0) {}
+        
+        

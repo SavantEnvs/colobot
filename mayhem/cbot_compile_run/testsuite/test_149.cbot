@@ -1,0 +1,6 @@
+
+        extern void TestErrorProtected() {
+            BaseClass b();
+            int i = b.a_protected;
+        }
+        

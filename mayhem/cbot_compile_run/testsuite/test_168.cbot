@@ -1,0 +1,6 @@
+
+        extern void ParamMissingExpression() {
+        }
+        void Test(int i = 1, float f = ) {}
+        
+        

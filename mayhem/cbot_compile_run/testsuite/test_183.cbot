@@ -1,0 +1,14 @@
+
+        public class SubClass extends BaseClass {
+            bool NoErrorProtectedSubClass() {
+                ASSERT(true == BaseClassProtected());
+                ASSERT(true == this.BaseClassProtected());
+                ASSERT(true == super.BaseClassProtected());
+                return true;
+            }
+        }
+        extern void TestNoErrorProtected() {
+            SubClass s();
+            ASSERT(true == s.NoErrorProtectedSubClass());
+        }
+    

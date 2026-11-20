@@ -1,0 +1,14 @@
+
+        public class BaseClass {
+            protected int a_protected = 1;
+            bool test() {
+                a_protected = 1;
+                int a = a_protected;
+                return true;
+            }
+        }
+        extern void Test() {
+            BaseClass b();
+            ASSERT(true == b.test());
+        }
+    

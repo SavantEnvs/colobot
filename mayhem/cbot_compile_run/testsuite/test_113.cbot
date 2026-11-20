@@ -1,0 +1,12 @@
+
+        extern void TestArrayInitializationWithVars() {
+            int x=1, y=2, z=3;
+            int i[] = { x, y, z };
+            ASSERT(i[0] == 1);
+            ASSERT(i[1] == 2);
+            ASSERT(i[2] == 3);
+            i[0] += 1;
+            ASSERT(i[0] == 2);
+            ASSERT(x == 1);
+        }
+    

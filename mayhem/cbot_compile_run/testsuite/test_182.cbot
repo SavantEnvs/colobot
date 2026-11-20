@@ -1,0 +1,16 @@
+
+        public class BaseClass {
+            protected bool BaseClassProtected() {
+                return true;
+            }
+            bool NoErrorProtectedSameClass() {
+                BaseClass b();
+                ASSERT(true == b.BaseClassProtected());
+                return BaseClassProtected();
+            }
+        }
+        extern void Test() {
+            BaseClass b();
+            ASSERT(true == b.NoErrorProtectedSameClass());
+        }
+    

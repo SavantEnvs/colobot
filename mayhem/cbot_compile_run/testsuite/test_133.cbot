@@ -1,0 +1,13 @@
+
+        public class TestClass {
+            int a = 123;
+            int b = 246;
+            TestClass testSetA(int x) { a = x; return this; }
+            TestClass testSetB(int y) { b = y; return this; }
+        }
+        extern void ConstructorMethodChain() {
+            TestClass tc().testSetA(111).testSetB(222);
+            ASSERT(tc.a == 111);
+            ASSERT(tc.b == 222);
+        }
+    

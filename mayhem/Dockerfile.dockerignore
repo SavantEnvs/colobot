@@ -1,0 +1,12 @@
+# Build context for mayhem/Dockerfile: the full repo incl. .git; drop only local build output.
+/build*/
+*.o
+*.a
+*.so
+/cbot_compile_run_fuzzer*
+/cbot_restore_state_fuzzer*
+/stringutils_utf8_fuzzer*
+/model_input_fuzzer*
+/level_parser_fuzzer*
+*.swp
+*~

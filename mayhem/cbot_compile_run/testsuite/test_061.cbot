@@ -1,0 +1,23 @@
+
+        public class TestClass {
+            public static int instanceCounter = 0;
+            public void TestClass() {
+                instanceCounter++;
+            }
+        }
+        
+        extern void ClassConstructor()
+        {
+            TestClass t1();
+            ASSERT(t1.instanceCounter == 1);
+            ASSERT(t1 != null);
+            TestClass t2; // not calling the constructor!
+            ASSERT(t1.instanceCounter == 1);
+        //"    ASSERT(t2 == null);\n" // TODO: I was pretty sure that's how it worked, but apparently not...
+            TestClass t3 = new TestClass();
+            ASSERT(t1.instanceCounter == 2);
+            ASSERT(t3.instanceCounter == 2);
+            ASSERT(t3 != null);
+            ASSERT(t3 != t1);
+        }
+    

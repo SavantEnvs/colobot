@@ -1,0 +1,15 @@
+
+        public class TestClass {
+            public int test(string test) {
+                return 1;
+            }
+            public int test(int test) {
+                return 2;
+            }
+        }
+        extern void ClassMethodOverloading() {
+            TestClass t();
+            ASSERT(t.test("5") == 1);
+            ASSERT(t.test(5) == 2);
+        }
+    

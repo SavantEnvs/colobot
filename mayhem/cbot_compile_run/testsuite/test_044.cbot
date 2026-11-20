@@ -1,0 +1,8 @@
+
+        extern void ArrayToString()
+        {
+            int[] array = {2, 4, 6};
+            string arrayStr = ""+array;
+            ASSERT(arrayStr == "{ 2, 4, 6 }");
+        }
+    

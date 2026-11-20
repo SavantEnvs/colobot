@@ -1,0 +1,7 @@
+
+        public class SubClass extends BaseClass {
+            void testErrorPrivate() {
+                int a = a_private;
+            }
+        }
+        

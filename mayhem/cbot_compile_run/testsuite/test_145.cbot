@@ -1,0 +1,8 @@
+
+        int Test() { return 2; }
+        
+        extern void DontCallMethodInTestClass()
+        {
+            ASSERT(2 == Test());
+        }
+    

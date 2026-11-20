@@ -1,0 +1,11 @@
+
+        extern void TestFinallyOverrideError() {
+            try {
+                5/0;
+                ASSERT(false);
+            } catch(CBotErrZeroDiv) {
+                throw CBotErrNull;
+            }
+            ASSERT(false);
+        }
+        

@@ -1,0 +1,10 @@
+
+        extern void ParametersWithDefaultValues() {
+            ASSERT(true == Test());
+            ASSERT(true == Test(1));
+            ASSERT(true == Test(1, 2));
+        }
+        bool Test(int i = 1, float f = 2.0) {
+            return (i == 1) && (f == 2.0);
+        }
+    

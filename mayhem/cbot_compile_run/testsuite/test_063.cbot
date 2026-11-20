@@ -1,0 +1,7 @@
+
+        public class AClass {};
+        extern void ClassBadNew()
+        {
+            AClass a = new "abc";
+        }
+        

@@ -1,0 +1,11 @@
+project: savantenvs/colobot
+target: cbot_compile_run
+
+cmds:
+  - cmd: /mayhem/cbot_compile_run_fuzzer
+    libfuzzer: true
+    timeout: 10
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cbot_compile_run/testsuite

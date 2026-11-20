@@ -1,0 +1,6 @@
+
+        extern void BadArrayDeclarationTest()
+        {
+            int[5] a;
+        }
+        

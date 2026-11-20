@@ -1,0 +1,7 @@
+
+        public class SubClass extends BaseClass {
+            void ErrorPrivateSuper() {
+                super.BaseClassPrivate();
+            }
+        }
+        

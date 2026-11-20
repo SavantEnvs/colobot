@@ -1,0 +1,6 @@
+
+        extern void TestByteToString() {
+            byte c = 90;
+            ASSERT(c + "" == "90");
+        }
+    

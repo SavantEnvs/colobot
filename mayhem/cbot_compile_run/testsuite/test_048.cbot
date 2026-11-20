@@ -1,0 +1,15 @@
+
+        bool notThisOne()
+        {
+            return false;
+        }
+        bool testFunction()
+        {
+            return true;
+        }
+        
+        extern void Functions()
+        {
+            ASSERT(testFunction());
+        }
+    

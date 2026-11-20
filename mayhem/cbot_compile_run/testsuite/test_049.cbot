@@ -1,0 +1,12 @@
+
+        int fact(int x)
+        {
+            if(x == 0) return 1;
+            return fact(x-1) * x;
+        }
+        
+        extern void FunctionRecursion()
+        {
+            ASSERT(fact(10) == 3628800);
+        }
+    

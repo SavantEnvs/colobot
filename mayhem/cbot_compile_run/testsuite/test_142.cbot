@@ -1,0 +1,8 @@
+
+        void Test(int i, float f) {}
+        void Test(float f, int i) {}
+        
+        extern void AmbiguousCallNumbers() {
+            Test(1, 2);
+        }
+        

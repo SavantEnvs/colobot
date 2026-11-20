@@ -1,0 +1,6 @@
+float test(float x) {
+    ASSERT(x == nan);
+    return x;
+}
+extern void TestNANParam() {
+    ASSERT(nan == nan);

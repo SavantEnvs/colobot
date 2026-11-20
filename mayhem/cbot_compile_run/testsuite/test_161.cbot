@@ -1,0 +1,7 @@
+
+        extern void PreIncrementMethodCall()
+        {
+            TestClass tc();
+            ++tc.GetInt();
+        }
+        

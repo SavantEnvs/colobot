@@ -1,0 +1,60 @@
+
+        extern void TestCharValue()
+        {
+            ASSERT('A' == 65);
+            ASSERT('B' == 66);
+            ASSERT('C' == 67);
+            ASSERT('\a' == 0x07);
+            ASSERT('\b' == 0x08);
+            ASSERT('\t' == 0x09);
+            ASSERT('\n' == 0x0A);
+            ASSERT('\v' == 0x0B);
+            ASSERT('\f' == 0x0C);
+            ASSERT('\r' == 0x0D);
+            ASSERT('\"' == 0x22);
+            ASSERT('\'' == 0x27);
+            ASSERT('\\' == 0x5C);
+        }
+        extern void TestCharUnicodeEscape()
+        {
+            ASSERT('\u0007' == '\a');
+            ASSERT('\u0008' == '\b');
+            ASSERT('\u0009' == '\t');
+            ASSERT('\u000A' == '\n');
+            ASSERT('\u000B' == '\v');
+            ASSERT('\u000C' == '\f');
+            ASSERT('\u000D' == '\r');
+            ASSERT('\u0022' == '\"');
+            ASSERT('\u0027' == '\'');
+            ASSERT('\u005C' == '\\');
+        }
+        extern void AssignCharToString_ToUTF_8()
+        {
+            string test = '\u00A9';
+            test += '\u00AE';
+            ASSERT(test == "\xC2\xA9\xC2\xAE");
+        }
+        extern void AddCharToString_ToUTF_8()
+        {
+            ASSERT("" + 'A' + 'B' + 'C' == "ABC");
+            ASSERT("" + '\u00A9' == "\xC2\xA9");
+            ASSERT("" + '\u00AE' == "\xC2\xAE");
+            ASSERT("" + '\u262E' == "\xE2\x98\xAE");
+            ASSERT("" + '\u262F' == "\xE2\x98\xAF");
+            ASSERT("" + '\U0001F60E' == "\xF0\x9F\x98\x8E");
+            ASSERT("" + '\U0001F61C' == "\xF0\x9F\x98\x9C");
+            ASSERT("" + '\U0001F6E0' == "\xF0\x9F\x9B\xA0");
+            ASSERT("" + '\U0010FFFF' == "\xF4\x8F\xBF\xBF");
+        }
+        extern void Test_Char_Multiple_Bytes_Inside_Quotes()
+        {
+            ASSERT("" + '©' == "\xC2\xA9");
+            ASSERT("" + '®' == "\xC2\xAE");
+            ASSERT("" + '☮' == "\xE2\x98\xAE");
+            ASSERT("" + '☯' == "\xE2\x98\xAF");
+            ASSERT("" + '😎' == "\xF0\x9F\x98\x8E");
+            ASSERT("" + '😜' == "\xF0\x9F\x98\x9C");
+            ASSERT("" + '🛠' == "\xF0\x9F\x9B\xA0");
+            ASSERT("" + '􏿿' == "\xF4\x8F\xBF\xBF");
+        }
+    

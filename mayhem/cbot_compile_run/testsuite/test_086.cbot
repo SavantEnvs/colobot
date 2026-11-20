@@ -1,0 +1,45 @@
+
+        public class BaseClass {
+            int a = 123;
+            int b = 456;
+            int c = 789;
+        }
+        public class MidClass extends BaseClass {
+            int b = 1011;
+            int c = 1213;
+            int d = 1415;
+        }
+        public class SubClass extends MidClass {
+            int c = 1617;
+            int d = 1819;
+            int e = 2021;
+        }
+        extern void ClassInheritanceVars()
+        {
+            BaseClass bc();
+            ASSERT(bc.a == 123);
+            ASSERT(bc.b == 456);
+            ASSERT(bc.c == 789);
+            MidClass  mc();
+            ASSERT(mc.a == 123);
+            ASSERT(mc.b == 1011);
+            ASSERT(mc.c == 1213);
+            ASSERT(mc.d == 1415);
+            SubClass  sc();
+            ASSERT(sc.a == 123);
+            ASSERT(sc.b == 1011);
+            ASSERT(sc.c == 1617);
+            ASSERT(sc.d == 1819);
+            ASSERT(sc.e == 2021);
+        // Test polymorphism
+            bc = mc;
+            ASSERT(bc.a == 123);
+            ASSERT(bc.b == 456);
+            ASSERT(bc.c == 789);
+            mc = sc;
+            ASSERT(mc.a == 123);
+            ASSERT(mc.b == 1011);
+            ASSERT(mc.c == 1213);
+            ASSERT(mc.d == 1415);
+        }
+    

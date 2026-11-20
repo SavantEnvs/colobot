@@ -1,0 +1,7 @@
+
+        extern void OtherClass::TestCallWithWrongThis()
+        {
+            this.TestMethod();
+        }
+        public void TestClass::TestMethod() {}
+        

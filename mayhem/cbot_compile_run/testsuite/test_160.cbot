@@ -1,0 +1,15 @@
+
+        public class TestClass {
+            int GetInt() { return 1; }
+        }
+        extern void TestIncrementDecrement()
+        {
+            int i = 1;
+            ASSERT(2 == ++i);
+            ASSERT(2 == i++);
+            ASSERT(3 ==  i );
+            ASSERT(2 == --i);
+            ASSERT(2 == i--);
+            ASSERT(1 ==  i );
+        }
+    

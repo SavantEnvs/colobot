@@ -1,0 +1,6 @@
+
+        extern void TestUndefined()
+        {
+            ASSERT(a == 0);
+        }
+        

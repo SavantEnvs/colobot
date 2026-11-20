@@ -1,0 +1,10 @@
+
+        public class TestClass { int[] a = {123}; }
+        TestClass GetObject(TestClass t) {
+            return t;
+        }
+        extern void TestAccessMemberVarArrayEmpty() {
+            TestClass tc();
+            int i = GetObject(tc).a[0;
+        }
+        

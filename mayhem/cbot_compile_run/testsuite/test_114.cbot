@@ -1,0 +1,13 @@
+
+        int[] test() {
+            int[] a = {1, 2, 3};
+            return a;
+        }
+        extern void TestArrayFunctionReturn() {
+            int[] b = test();
+            ASSERT(sizeof(b) == 3);
+            ASSERT(b[0] == 1);
+            ASSERT(b[1] == 2);
+            ASSERT(b[2] == 3);
+        }
+    

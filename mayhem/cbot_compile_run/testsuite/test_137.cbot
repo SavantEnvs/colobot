@@ -1,0 +1,8 @@
+
+        void Test(BaseClass b) {}
+        void Test(SubClass s) {}
+        
+        extern void AmbiguousCallArgumentNull() {
+            Test(null);
+        }
+        

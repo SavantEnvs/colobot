@@ -1,0 +1,6 @@
+
+        extern void ErrorProtectedAssignment() {
+            BaseClass b();
+            b.a_protected = 1;
+        }
+        

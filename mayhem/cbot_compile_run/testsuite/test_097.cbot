@@ -1,0 +1,6 @@
+
+        extern void OctalValueOutOfRange()
+        {
+            "  \400  ";
+        }
+        

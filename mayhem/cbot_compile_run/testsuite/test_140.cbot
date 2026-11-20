@@ -1,0 +1,8 @@
+
+        void Test(BaseClass b, SubClass s) {}
+        void Test(SubClass s, BaseClass b) {}
+        
+        extern void UpcastAmbiguousCall() {
+            Test(new SubClass(), new SubClass());
+        }
+        

@@ -1,0 +1,8 @@
+
+        public class SomeOtherClass {
+            void testErrorProtectedAssignment() {
+                BaseClass b();
+                b.a_protected = 1;
+            }
+        }
+        

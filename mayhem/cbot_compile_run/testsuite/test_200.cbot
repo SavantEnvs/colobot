@@ -1,0 +1,16 @@
+
+        void thrownull() {throw CBotErrNull;}
+        extern void TestThrowCaught() {
+            bool caught = false;
+            bool tried = false;
+            try {
+                tried = true;
+                thrownull();
+                ASSERT(false);
+            } catch(CBotErrNull) {
+                caught = true;
+            }
+            ASSERT(caught == true);
+            ASSERT(tried == true);
+        }
+    

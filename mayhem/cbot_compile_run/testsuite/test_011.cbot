@@ -1,0 +1,7 @@
+public class Test { int a = 1337; }
+extern void ClassToString()
+{
+    Test test();
+    string testStr = ""+test;
+    ASSERT(testStr == "Pointer to Test( a=1337 )");
+}

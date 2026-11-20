@@ -1,0 +1,16 @@
+
+        public class BaseClass {}
+        public class MidClass extends BaseClass {}
+        public class SubClass extends MidClass {}
+        extern void ClassInheritanceAssignment()
+        {
+            BaseClass bc = new MidClass();
+            MidClass  mc = bc;
+            mc = new SubClass();
+            SubClass  sc = mc;
+            bc = mc;
+            bc = new MidClass();
+            bc = new SubClass();
+            sc = bc;
+        }
+    

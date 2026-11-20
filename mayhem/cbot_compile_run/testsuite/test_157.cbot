@@ -1,0 +1,6 @@
+
+        extern void ErrorPrivateAssignment() {
+            BaseClass b();
+            b.a_private = 2;
+        }
+        

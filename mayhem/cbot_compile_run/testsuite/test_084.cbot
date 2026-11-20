@@ -1,0 +1,8 @@
+
+        public class TestClass {}
+        extern void ClassStringAdd()
+        {
+            TestClass t();
+            string s = t + "!";
+        }
+    

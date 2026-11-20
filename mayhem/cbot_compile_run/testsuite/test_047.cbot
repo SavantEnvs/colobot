@@ -1,0 +1,14 @@
+
+        public class TestClass {
+            public int i = 0;
+        }
+        extern void ArraysInClasses()
+        {
+            TestClass test[];
+            test[0] = new TestClass();
+            test[0].i = 5;
+            ASSERT(test[0].i == 5);
+            
+            TestClass[] test2;
+        }
+    

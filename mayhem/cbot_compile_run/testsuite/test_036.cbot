@@ -1,0 +1,62 @@
+
+        extern void Test_Switch_Case() {
+            int n = 0, c = 0;
+            for (int i = -9; i < 11; ++i) {
+                switch (i) {
+                    case -9: n = -9; ++c; break;
+                    case -8: n = -8; ++c; break;
+                    case -7: n = -7; ++c; break;
+                    case -6: n = -6; ++c; break;
+                    case -5: n = -5; ++c; break;
+                    case -4: n = -4; ++c; break;
+                    case -3: n = -3; ++c; break;
+                    case -2: n = -2; ++c; break;
+                    case -1: n = -1; ++c; break;
+                    case 0: n = 0; ++c; break;
+                    case 1: n = 1; ++c; break;
+                    case 2: n = 2; ++c; break;
+                    case 3: n = 3; ++c; break;
+                    case 4: n = 4; ++c; break;
+                    case 5: n = 5; ++c; break;
+                    case 6: n = 6; ++c; break;
+                    case 7: n = 7; ++c; break;
+                    case 8: n = 8; ++c; break;
+                    case 9: n = 9; ++c; break;
+                    default: n = 10; ++c; break;
+                }
+                ASSERT(n == i);
+            }
+            ASSERT(n == 10);
+            ASSERT(c == 20);
+        }
+        extern void Test_Case_With_Math() {
+            int n = 0, c = 0;
+            for (int i = -9; i < 11; ++i) {
+                switch (i * 10) {
+                    case -9*10: n = -90; ++c; break;
+                    case -8*10: n = -80; ++c; break;
+                    case -7*10: n = -70; ++c; break;
+                    case -6*10: n = -60; ++c; break;
+                    case -5*10: n = -50; ++c; break;
+                    case -4*10: n = -40; ++c; break;
+                    case -3*10: n = -30; ++c; break;
+                    case -2*10: n = -20; ++c; break;
+                    case -1*10: n = -10; ++c; break;
+                    case 0*10: n = 0; ++c; break;
+                    case 1*10: n = 10; ++c; break;
+                    case 2*10: n = 20; ++c; break;
+                    case 3*10: n = 30; ++c; break;
+                    case 4*10: n = 40; ++c; break;
+                    case 5*10: n = 50; ++c; break;
+                    case 6*10: n = 60; ++c; break;
+                    case 7*10: n = 70; ++c; break;
+                    case 8*10: n = 80; ++c; break;
+                    case 9*10: n = 90; ++c; break;
+                    default: n = 100; ++c; break;
+                }
+                ASSERT(n == i * 10);
+            }
+            ASSERT(n == 100);
+            ASSERT(c == 20);
+        }
+    

@@ -1,0 +1,20 @@
+
+        public class Something {
+            public int a = 7;
+            void test2(int i, int expected) {
+                ASSERT(i == expected);
+            }
+        }
+        public class TestClass {
+            public int i = 5;
+            public void test(Something s) {
+                s.test2(this.i, 5);
+            }
+        }
+        extern void WeirdClassThisAsParamThing()
+        {
+            Something s();
+            TestClass t();
+            t.test(s);
+        }
+    

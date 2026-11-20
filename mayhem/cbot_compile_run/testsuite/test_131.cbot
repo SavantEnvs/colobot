@@ -1,0 +1,14 @@
+
+        public class TestClass {
+            int x = 123;
+            TestClass testGetThis() { return this; }
+            int testGetX() { return x; }
+        }
+        TestClass GetObject(TestClass t) {
+            return t;
+        }
+        extern void TestAccessMemberMethodChain() {
+            TestClass tc();
+            ASSERT(123 == GetObject(tc).testGetThis().testGetX());
+        }
+    

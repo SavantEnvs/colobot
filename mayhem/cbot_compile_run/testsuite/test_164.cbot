@@ -1,0 +1,6 @@
+
+        extern void BadPreIncrementNotAVar()
+        {
+            ++123;
+        }
+        

@@ -1,0 +1,11 @@
+
+        extern void StringTest()
+        {
+            string a = "Colo";
+            string b = "bot";
+            string c = a + b + "!";
+            ASSERT(a == "Colo");
+            ASSERT(b == "bot");
+            ASSERT(c == "Colobot!");
+        }
+    

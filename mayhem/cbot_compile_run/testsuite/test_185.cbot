@@ -1,0 +1,8 @@
+
+        public class SubClass extends BaseClass {}
+        
+        extern void TestErrorProtected_2() {
+            SubClass s();
+            s.BaseClassProtected();
+        }
+        

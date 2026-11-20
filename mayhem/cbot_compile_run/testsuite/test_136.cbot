@@ -1,0 +1,8 @@
+
+        bool Test(BaseClass b) {
+            return (b == null);
+        }
+        extern void PassNullAsArgument() {
+            ASSERT(true == Test(null));
+        }
+    

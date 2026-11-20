@@ -1,0 +1,10 @@
+
+        public class AClass {
+            public void test() {}
+        };
+        extern void ClassCallOnNull()
+        {
+            AClass a = null;
+            a.test();
+        }
+        

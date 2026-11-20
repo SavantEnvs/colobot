@@ -1,0 +1,6 @@
+
+        extern void NextParamNeedsDefaultValue() {
+        }
+        void Test(int i = 1, float f) {}
+        
+        

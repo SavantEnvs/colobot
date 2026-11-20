@@ -1,0 +1,14 @@
+
+        public class TestClass {
+            public void TestClass() {
+                FAIL();
+            }
+        }
+        extern void TestClassNullPointer()
+        {
+            TestClass t;
+        //"    ASSERT(t == null);\n" // TODO: OH REALLY?
+            TestClass t2 = null;
+            ASSERT(t2 == null);
+        }
+    

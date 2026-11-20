@@ -1,0 +1,10 @@
+
+        public class TestClass { private int x = 123; }
+        TestClass GetObject(TestClass t) {
+            return t;
+        }
+        extern void TestAccessMemberVarPrivate() {
+            TestClass tc();
+            ASSERT(123 == GetObject(tc).x);
+        }
+        

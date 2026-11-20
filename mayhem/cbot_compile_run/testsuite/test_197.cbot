@@ -1,0 +1,11 @@
+
+        extern void TestCatchOnlyOneErrorType() {
+            try {
+                5/0;
+                ASSERT(false);
+            } catch(CBotErrNull) {
+                ASSERT(false);
+            }
+            ASSERT(false);
+        }
+        

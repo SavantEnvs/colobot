@@ -1,0 +1,5 @@
+extern void ArrayTest()
+{
+    int a[];
+    ASSERT(sizeof(a) == 0);
+    ASSERT(a == null);

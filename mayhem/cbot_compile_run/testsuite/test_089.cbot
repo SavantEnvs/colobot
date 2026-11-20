@@ -1,0 +1,13 @@
+
+        public class OtherClass {
+            TestClass testclass;
+        }
+        public class TestClass {
+            int test;
+            OtherClass otherclass;
+        }
+        extern void TestCompileCircularReference()
+        {
+            TestClass t();
+        }
+    

@@ -1,0 +1,13 @@
+
+        extern void TestSaveInheritedMembers()
+        {
+            TestClass2 t();
+            ASSERT(t.a == 123);
+            ASSERT(t.b == 456);
+            t.a = 789; t.b = 1011;
+            ASSERT(t.a == 789);
+            ASSERT(t.b == 1011);
+            ASSERT(789 == t.a);
+            ASSERT(1011 == t.b);
+        }
+    

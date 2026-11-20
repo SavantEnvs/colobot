@@ -1,0 +1,17 @@
+
+        extern void TestBinaryLiterals() {
+            ASSERT(  8 ==   0b00001000);
+            ASSERT( 12 ==   0b00001100);
+            ASSERT( 16 ==   0b00010000);
+            ASSERT( 24 ==   0b00011000);
+            ASSERT( 32 ==   0b00100000);
+            ASSERT( 48 ==   0b00110000);
+            ASSERT( 64 ==   0b01000000);
+            ASSERT( 96 ==   0b01100000);
+            ASSERT(128 ==   0b10000000);
+            ASSERT(192 ==   0b11000000);
+            ASSERT(256 ==  0b100000000);
+            ASSERT(384 ==  0b110000000);
+            ASSERT(512 == 0b1000000000);
+        }
+    

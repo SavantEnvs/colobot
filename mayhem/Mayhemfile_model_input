@@ -1,0 +1,11 @@
+project: savantenvs/colobot
+target: model_input
+
+cmds:
+  - cmd: /mayhem/model_input_fuzzer
+    libfuzzer: true
+    timeout: 10
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/model_input/testsuite

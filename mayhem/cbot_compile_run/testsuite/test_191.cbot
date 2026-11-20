@@ -1,0 +1,8 @@
+
+        public class SubClass extends BaseClass {}
+        
+        extern void TestErrorPrivate_2() {
+            SubClass s();
+            s.BaseClassPrivate();
+        }
+        

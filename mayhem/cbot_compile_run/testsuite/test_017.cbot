@@ -1,0 +1,8 @@
+public class TestClass {
+    private int test[];
+    private int test2[5];
+    
+    public void TestClass() {
+        ASSERT(sizeof(test) == 0);
+        ASSERT(sizeof(this.test) == 0);
+        ASSERT(test == null);

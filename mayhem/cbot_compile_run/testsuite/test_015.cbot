@@ -1,0 +1,8 @@
+extern void ClassInheritanceToString_3()
+{
+    string s = new SubClass;
+    ASSERT(s == "Pointer to SubClass( c=7, d=8, e=9 ) extends MidClass(  ) extends BaseClass(  )");
+}
+public class BaseClass { /* no fields */ }
+public class MidClass extends BaseClass { /* no fields */ }
+public class SubClass extends MidClass { int c = 7, d = 8, e = 9; }

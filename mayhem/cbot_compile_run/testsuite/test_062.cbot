@@ -1,0 +1,23 @@
+
+        public class TestClass {
+            public static int instanceCounter = 0;
+            public void TestClass() {
+                instanceCounter++;
+            }
+            public void ~TestClass() {
+                instanceCounter--;
+            }
+        }
+        
+        extern void ClassDestructor()
+        {
+            TestClass t1();
+            ASSERT(t1.instanceCounter == 1);
+            {
+                TestClass t2();
+                ASSERT(t2.instanceCounter == 2);
+                ASSERT(t1.instanceCounter == 2);
+            }
+            ASSERT(t1.instanceCounter == 1);
+        }
+    

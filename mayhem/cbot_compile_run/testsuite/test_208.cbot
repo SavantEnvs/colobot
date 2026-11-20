@@ -1,0 +1,19 @@
+
+        extern void TestFinallyExecutedOnError() {
+            bool caught = false;
+            bool tried = false;
+            bool finally_ran = false;
+            try {
+                tried = true;
+                5/0;
+                ASSERT(false);
+            } catch(CBotErrZeroDiv) {
+                caught = true;
+            } finally {
+                finally_ran = true;
+            }
+            ASSERT(caught == true);
+            ASSERT(tried == true);
+            ASSERT(finally_ran == true);
+        }
+    

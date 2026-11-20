@@ -1,0 +1,9 @@
+
+        bool Test(BaseClass b, SubClass s) { return false; }
+        bool Test(SubClass s, BaseClass b) { return false; }
+        bool Test(SubClass s, SubClass s2) { return true; }
+        
+        extern void NoErrorMoreSpecific() {
+            ASSERT(true == Test(new SubClass(), new SubClass()));
+        }
+    

@@ -1,0 +1,6 @@
+
+        void Test() {}
+        extern void TestAccessMemberVoid() {
+            Test().x;
+        }
+        

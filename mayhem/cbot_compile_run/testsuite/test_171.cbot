@@ -1,0 +1,8 @@
+
+        extern void AmbiguousCallOneDefault() {
+            Test(1);
+        }
+        void Test(int i, float f = 2) {}
+        void Test(int i) {}
+        
+        

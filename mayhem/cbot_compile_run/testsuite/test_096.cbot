@@ -1,0 +1,6 @@
+
+        extern void HexValueOutOfRange()
+        {
+            "  \x100  ";
+        }
+        

@@ -1,0 +1,7 @@
+
+        public class SomethingElse {
+        }
+        public class TestClass2 {
+            public void ~SomethingElse() {}
+        }
+        

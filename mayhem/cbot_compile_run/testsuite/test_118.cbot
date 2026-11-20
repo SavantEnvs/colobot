@@ -1,0 +1,10 @@
+
+        public class TestClass { int x = 1; }
+        TestClass GetObjectNull() {
+            TestClass t = null;
+            return t;
+        }
+        extern void TestAccessMemberObjectNull() {
+            GetObjectNull().x;
+        }
+        

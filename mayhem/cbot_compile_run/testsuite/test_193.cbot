@@ -1,0 +1,4 @@
+
+        public class TestClass { int a = 123; }
+        public class TestClass2 extends TestClass { int b = 456; }
+    

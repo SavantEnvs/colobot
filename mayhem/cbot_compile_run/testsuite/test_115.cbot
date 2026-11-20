@@ -1,0 +1,21 @@
+
+        public class Test1 {
+            int x = 1337;
+        }
+        public class Test2 {
+            public bool test(int a) {
+                return a == 1337;
+            }
+        }
+        public class Test3 {
+            public Test1 test1 = new Test1();
+            public Test2 test2 = new Test2();
+            public void test() {
+                ASSERT(test2.test(test1.x));
+            }
+        }
+        extern void AccessMembersInParameters() {
+            Test3 t();
+            t.test();
+        }
+    

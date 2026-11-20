@@ -1,0 +1,10 @@
+
+        extern void StringAsArray()
+        {
+            string s = "Colobot";
+            ASSERT(s[0] == "C");
+            ASSERT(s[3] == "o");
+            s[2] = "L"; s[4] = "B"; s[6] = "T";
+            ASSERT(s == "CoLoBoT");
+        }
+    

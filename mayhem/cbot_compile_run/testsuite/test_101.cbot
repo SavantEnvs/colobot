@@ -1,0 +1,24 @@
+
+        extern void StringFunctions()
+        {
+            string s = "Colobot";
+            ASSERT(strlen(s) == 7);
+            ASSERT(strlower(s) == "colobot");
+            ASSERT(strupper(s) == "COLOBOT");
+            ASSERT(strleft(s, 3) == "Col");
+            ASSERT(strright(s, 3) == "bot");
+            ASSERT(strmid(s, 1, 3) == "olo");
+            ASSERT(strfind(s, "o") == 1);
+            ASSERT(strval("2.5") == 2.5);
+        }
+        extern void StringFunctionsOutOfRange()
+        {
+            ASSERT(strmid("asdf", 5, 1) == "");
+            ASSERT(strmid("asdf", 0, 100) == "asdf");
+            ASSERT(strmid("asdf", -500, 100) == "asdf");
+            ASSERT(strleft("asdf", 15) == "asdf");
+            ASSERT(strleft("asdf", -15) == "");
+            ASSERT(strright("asdf", 15) == "asdf");
+            ASSERT(strright("asdf", -15) == "");
+        }
+    

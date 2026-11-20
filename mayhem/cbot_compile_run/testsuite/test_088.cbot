@@ -1,0 +1,89 @@
+
+        public class BaseClass {
+            int a = 123;
+            int b = 456;
+            int c = 789;
+            void testBaseMembersAndParams(int a, int b, int c) {
+                ASSERT(a != 123);
+                ASSERT(b != 456);
+                ASSERT(c != 789);
+                ASSERT(this.a == 123);
+                ASSERT(this.b == 456);
+                ASSERT(this.c == 789);
+            }
+            BaseClass testSuperReturnThis(){ return this; }
+            BaseClass testReturnThisFromBaseClass() { return this; }
+        }
+        public class MidClass extends BaseClass {
+            int b = 1011;
+            int c = 1213;
+            int d = 1415;
+            void testMidMembersAndParams(int a, int b, int c, int d) {
+                ASSERT(a != 123);
+                ASSERT(b != 1011);
+                ASSERT(c != 1213);
+                ASSERT(d != 1415);
+                ASSERT(this.a == 123);
+                ASSERT(this.b == 1011);
+                ASSERT(this.c == 1213);
+                ASSERT(this.d == 1415);
+            }
+            MidClass testSuperReturnThis(){ return super.testSuperReturnThis(); }
+            MidClass testReturnThisFromMidClass() { return this; }
+        }
+        public class SubClass extends MidClass {
+            int c = 1617;
+            int d = 1819;
+            int e = 2021;
+            void testSubMembersAndParams(int a, int b, int c, int d, int e) {
+                ASSERT(a != 123);
+                ASSERT(b != 1011);
+                ASSERT(c != 1617);
+                ASSERT(d != 1819);
+                ASSERT(e != 2021);
+                ASSERT(this.a == 123);
+                ASSERT(this.b == 1011);
+                ASSERT(this.c == 1617);
+                ASSERT(this.d == 1819);
+                ASSERT(this.e == 2021);
+            }
+            SubClass testSuperReturnThis(){ return super.testSuperReturnThis(); }
+            SubClass testReturnThisFromSubClass() { return this; }
+        }
+        extern void ClassInheritanceTestThis()
+        {
+            BaseClass bc();
+            MidClass  mc();
+            SubClass  sc();
+            ASSERT(bc == bc.testSuperReturnThis());
+            ASSERT(bc == bc.testReturnThisFromBaseClass());
+                         bc.testBaseMembersAndParams(-1, -2, -3);
+            ASSERT(mc == mc.testSuperReturnThis());
+            ASSERT(mc == mc.testReturnThisFromBaseClass());
+            ASSERT(mc == mc.testReturnThisFromMidClass());
+                         mc.testBaseMembersAndParams(-1, -2, -3);
+                         mc.testMidMembersAndParams(-1, -2, -3, -4);
+            ASSERT(sc == sc.testSuperReturnThis());
+            ASSERT(sc == sc.testReturnThisFromBaseClass());
+            ASSERT(sc == sc.testReturnThisFromMidClass());
+            ASSERT(sc == sc.testReturnThisFromSubClass());
+                         sc.testBaseMembersAndParams(-1, -2, -3);
+                         sc.testMidMembersAndParams(-1, -2, -3, -4);
+                         sc.testSubMembersAndParams(-1, -2, -3, -4, -5);
+        // Test polymorphism
+            bc = mc;
+            ASSERT(mc == bc.testSuperReturnThis());
+            ASSERT(mc == bc.testReturnThisFromBaseClass());
+                         bc.testBaseMembersAndParams(-1, -2, -3);
+            bc = sc;
+            ASSERT(sc == bc.testSuperReturnThis());
+            ASSERT(sc == bc.testReturnThisFromBaseClass());
+                         bc.testBaseMembersAndParams(-1, -2, -3);
+            mc = sc;
+            ASSERT(sc == mc.testSuperReturnThis());
+            ASSERT(sc == mc.testReturnThisFromBaseClass());
+            ASSERT(sc == mc.testReturnThisFromMidClass());
+                         mc.testBaseMembersAndParams(-1, -2, -3);
+                         mc.testMidMembersAndParams(-1, -2, -3, -4);
+        }
+    

@@ -1,0 +1,6 @@
+
+        extern void TestPublicRemoved()
+        {
+            TestClass t();
+        }
+        

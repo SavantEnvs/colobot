@@ -1,0 +1,12 @@
+
+        void thrownull() {throw CBotErrNull;}
+        extern void TestThrowUncaught() {
+            try {
+                thrownull();
+                ASSERT(false);
+            } catch(CBotErrZeroDiv) {
+                ASSERT(false);
+            }
+            ASSERT(false);
+        }
+        

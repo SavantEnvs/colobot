@@ -1,0 +1,11 @@
+project: savantenvs/colobot
+target: stringutils_utf8
+
+cmds:
+  - cmd: /mayhem/stringutils_utf8_fuzzer
+    libfuzzer: true
+    timeout: 10
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/stringutils_utf8/testsuite

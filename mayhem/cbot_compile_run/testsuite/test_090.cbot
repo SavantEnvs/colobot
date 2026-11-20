@@ -1,0 +1,14 @@
+
+        public class OtherClass {
+            TestClass testclass = new TestClass();
+        }
+        public class TestClass {
+            int test = 246;
+        }
+        extern void TestDefinedAfterReference()
+        {
+            OtherClass o();
+            TestClass t = o.testclass;
+            ASSERT(t.test == 246);
+        }
+    

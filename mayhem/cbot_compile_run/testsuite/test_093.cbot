@@ -1,0 +1,59 @@
+
+        extern void HexEscapeCodes()
+        {
+            ASSERT("  \x07  " == "  \a  ");
+            ASSERT("  \x08  " == "  \b  ");
+            ASSERT("  \x09  " == "  \t  ");
+            ASSERT("  \x0A  " == "  \n  ");
+            ASSERT("  \x0B  " == "  \v  ");
+            ASSERT("  \x0C  " == "  \f  ");
+            ASSERT("  \x0D  " == "  \r  ");
+            ASSERT("  \x22  " == "  \"  ");
+            ASSERT("  \x27  " == "  \'  ");
+            ASSERT("  \x5C  " == "  \\  ");
+            string test = "\x31 \x32 \x33";
+            ASSERT(test == "1 2 3");
+        }
+        extern void OctalEscapeCodes()
+        {
+            ASSERT("  \000  " == "  \x00  ");
+            ASSERT("  \007  " == "  \x07  ");
+            ASSERT("  \010  " == "  \x08  ");
+            ASSERT("  \011  " == "  \x09  ");
+            ASSERT("  \012  " == "  \x0A  ");
+            ASSERT("  \013  " == "  \x0B  ");
+            ASSERT("  \014  " == "  \x0C  ");
+            ASSERT("  \015  " == "  \x0D  ");
+            ASSERT("  \042  " == "  \x22  ");
+            ASSERT("  \047  " == "  \x27  ");
+            ASSERT("  \134  " == "  \x5C  ");
+            string test = "\101 \102 \103";
+            ASSERT(test == "A B C");
+        }
+        extern void UnicodeEscapeCodesToUTF_8()
+        {
+            ASSERT("  \u0000  " == "  \0  ");
+            ASSERT("  \u0007  " == "  \a  ");
+            ASSERT("  \u0008  " == "  \b  ");
+            ASSERT("  \u0009  " == "  \t  ");
+            ASSERT("  \u000A  " == "  \n  ");
+            ASSERT("  \u000B  " == "  \v  ");
+            ASSERT("  \u000C  " == "  \f  ");
+            ASSERT("  \u000D  " == "  \r  ");
+            ASSERT("  \u0022  " == "  \"  ");
+            ASSERT("  \u0027  " == "  \'  ");
+            ASSERT("  \u005C  " == "  \\  ");
+        
+            ASSERT("\u00A9" == "\xC2\xA9");
+            ASSERT("\u00AE" == "\xC2\xAE");
+            ASSERT("\u262E" == "\xE2\x98\xAE");
+            ASSERT("\u262F" == "\xE2\x98\xAF");
+            ASSERT("\U0001F60E" == "\xF0\x9F\x98\x8E");
+            ASSERT("\U0001F61C" == "\xF0\x9F\x98\x9C");
+            ASSERT("\U0001F6E0" == "\xF0\x9F\x9B\xA0");
+        }
+        extern void UnicodeMaxCharacterNameToUTF_8()
+        {
+            ASSERT("\U0010FFFF" == "\xF4\x8F\xBF\xBF");
+        }
+    

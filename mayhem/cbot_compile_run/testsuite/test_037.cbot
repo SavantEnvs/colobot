@@ -1,0 +1,8 @@
+
+        extern void Duplicate_Case() {
+            switch(0) {
+                case 1000:
+                case 10*100:
+            }
+        }
+        

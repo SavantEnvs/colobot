@@ -1,0 +1,6 @@
+
+        extern void TestErrorProtected_1() {
+            BaseClass b();
+            b.BaseClassProtected();
+        }
+        

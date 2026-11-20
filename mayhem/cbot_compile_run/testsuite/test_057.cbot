@@ -1,0 +1,29 @@
+
+        int FuncHasReturn()
+        {
+            return 1;
+        }
+        int BlockHasReturn()
+        {
+            {
+                {
+                }
+                return 2;
+            }
+        }
+        int IfElseHasReturn()
+        {
+            if (false) {
+                return 3;
+            } else {
+                if (false) return 3;
+                else return 3;
+            }
+        }
+        extern void Test()
+        {
+            ASSERT(1 == FuncHasReturn());
+            ASSERT(2 == BlockHasReturn());
+            ASSERT(3 == IfElseHasReturn());
+        }
+    

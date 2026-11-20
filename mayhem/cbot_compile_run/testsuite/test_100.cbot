@@ -1,0 +1,12 @@
+
+        extern void ArraysOfStrings()
+        {
+            string[] a;
+            string b[];
+            string c[5];
+            string d[] = {"test"};
+            d[1] = "test2";
+            ASSERT(d[0] == "test");
+            ASSERT(d[1] == "test2");
+        }
+    

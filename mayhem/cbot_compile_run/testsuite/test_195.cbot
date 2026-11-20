@@ -1,0 +1,13 @@
+
+        extern void TestCatchNotExecutedNormally() {
+            bool caught = false;
+            bool tried = false;
+            try {
+                tried = true;
+            } catch(CBotErrZeroDiv) {
+                caught = true;
+            }
+            ASSERT(caught == false);
+            ASSERT(tried == true);
+        }
+    

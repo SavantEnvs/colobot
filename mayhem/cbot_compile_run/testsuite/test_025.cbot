@@ -1,0 +1,6 @@
+
+        extern void DivideByZero()
+        {
+            float a = 5/0;
+        }
+        

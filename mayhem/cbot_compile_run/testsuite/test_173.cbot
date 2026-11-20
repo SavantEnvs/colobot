@@ -1,0 +1,15 @@
+
+        extern void DefaultValueUnaryExpression() {
+            TestNumbers();
+            TestBool();
+        }
+        void TestNumbers(int i = -1, float f = -1, int ii = ~1) {
+            ASSERT(i == -1);
+            ASSERT(f == -1.0);
+            ASSERT(ii == ~1);
+        }
+        void TestBool(bool b = !false, bool b2 = not false) {
+            ASSERT(true == b);
+            ASSERT(true == b2);
+        }
+    

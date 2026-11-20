@@ -1,0 +1,11 @@
+project: savantenvs/colobot
+target: level_parser
+
+cmds:
+  - cmd: /mayhem/level_parser_fuzzer
+    libfuzzer: true
+    timeout: 10
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/level_parser/testsuite

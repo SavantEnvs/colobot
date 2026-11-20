@@ -1,0 +1,8 @@
+
+        public class SomeOtherClass {
+            void testErrorPrivateAssignment() {
+                BaseClass b();
+                b.a_private = 1;
+            }
+        }
+        

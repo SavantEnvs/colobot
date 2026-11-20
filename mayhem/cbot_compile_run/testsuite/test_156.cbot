@@ -1,0 +1,6 @@
+
+        extern void TestErrorPrivate() {
+            BaseClass b();
+            int i = b.a_private;
+        }
+        

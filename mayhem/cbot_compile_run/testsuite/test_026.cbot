@@ -1,0 +1,6 @@
+
+        extern void MissingSemicolon()
+        {
+            string a = "hello"
+        }
+        

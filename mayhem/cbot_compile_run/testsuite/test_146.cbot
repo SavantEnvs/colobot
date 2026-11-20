@@ -1,0 +1,10 @@
+
+        int Test() { return 2; }
+        
+        public class OtherClass {}
+        
+        extern void OtherClass::TestCallWithThis()
+        {
+            this.Test();
+        }
+        

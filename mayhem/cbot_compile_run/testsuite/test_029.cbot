@@ -1,0 +1,15 @@
+
+        extern void VarBasic()
+        {
+            int a = 5;
+            ASSERT(a == 5);
+            int b = 3;
+            ASSERT(b == 3);
+            b = a;
+            ASSERT(b == 5);
+            ASSERT(b == a);
+            b = a + b;
+            ASSERT(b == 10);
+            ASSERT(b == 2*a);
+        }
+    

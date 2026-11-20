@@ -1,0 +1,6 @@
+
+        extern void MissingEndQuote()
+        {
+            'a
+        }
+        

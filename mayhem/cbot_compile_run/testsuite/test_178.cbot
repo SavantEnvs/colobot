@@ -1,0 +1,27 @@
+
+        public class TestClass
+        {
+            int i = 123, j = 456, k = 789;
+            int InsideClass()
+            {
+                ASSERT(456 == PublicMethod());
+                ASSERT(789 == NotPublicMethod());
+                return this.i;
+            }
+        }
+        extern void TestMethodsOutOfClass()
+        {
+            TestClass tc();
+            ASSERT(123 == tc.InsideClass());
+            ASSERT(456 == tc.PublicMethod());
+            ASSERT(789 == tc.NotPublicMethod());
+        }
+        public int TestClass::PublicMethod()
+        {
+            return this.j;
+        }
+        int TestClass::NotPublicMethod()
+        {
+            return k;
+        }
+    

@@ -1,0 +1,8 @@
+
+        extern void TestCallWithWrongObject()
+        {
+            OtherClass oc();
+            oc.TestMethod();
+        }
+        public void TestClass::TestMethod() {}
+        

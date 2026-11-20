@@ -1,0 +1,8 @@
+
+        int GetInt() {
+            return 1;
+        }
+        extern void TestAccessMemberNonObject() {
+            GetInt().x;
+        }
+        

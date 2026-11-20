@@ -1,0 +1,6 @@
+
+        extern void BadUnicodeCharacterName()
+        {
+            '\U00110000';
+        }
+        

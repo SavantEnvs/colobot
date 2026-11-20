@@ -1,0 +1,6 @@
+
+        extern void TestPublic()
+        {
+            TestClass t();
+        }
+    

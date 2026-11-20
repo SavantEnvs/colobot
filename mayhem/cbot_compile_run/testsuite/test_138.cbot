@@ -1,0 +1,4 @@
+
+        public class BaseClass { int a = 360; }
+        public class SubClass extends BaseClass {}
+    

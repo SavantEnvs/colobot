@@ -1,0 +1,10 @@
+
+        public class TestClass {
+            public int test(int[] test) {
+                return 1;
+            }
+            public int test(int[] test) {
+                return 2;
+            }
+        }
+        

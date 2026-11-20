@@ -1,0 +1,8 @@
+
+        public class SomeOtherClass {
+            void ErrorPrivate() {
+                BaseClass b();
+                b.BaseClassPrivate();
+            }
+        }
+        

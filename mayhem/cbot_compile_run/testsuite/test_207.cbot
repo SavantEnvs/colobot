@@ -1,0 +1,17 @@
+
+        extern void TestFinallyExecutedNormally() {
+            bool caught = false;
+            bool tried = false;
+            bool finally_ran = false;
+            try {
+                tried = true;
+            } catch(CBotErrZeroDiv) {
+                caught = true;
+            } finally {
+                finally_ran = true;
+            }
+            ASSERT(caught == false);
+            ASSERT(tried == true);
+            ASSERT(finally_ran == true);
+        }
+    

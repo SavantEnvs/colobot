@@ -1,0 +1,11 @@
+
+        string func()
+        {
+            return 5;
+        }
+        extern void ImplicitCastOnReturn()
+        {
+            string a = func();
+            ASSERT(a == "5");
+        }
+    

@@ -1,0 +1,28 @@
+
+        extern void ImplicitCast()
+        {
+            int a = 5;
+        //"    ASSERT(a == "5");
+            string b = a;
+            ASSERT(b == "5");
+        //"    ASSERT(b == a);
+            
+            string c = "2.5";
+        //"    ASSERT(c == 2.5);
+        //"    float d = c;
+        //"    ASSERT(d == c);
+        //"    ASSERT(d == 2.5);
+        }
+        
+        extern void AssignImplicitCast()
+        {
+            string a = 2;
+            ASSERT(a == "2");
+            a = 3;
+            ASSERT(a == "3");
+            string b = 2.5;
+            ASSERT(b == "2.5");
+            b = 3.5;
+            ASSERT(b == "3.5");
+        }
+    

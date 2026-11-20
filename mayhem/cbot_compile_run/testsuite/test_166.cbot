@@ -1,0 +1,8 @@
+
+        extern void NotUsingDefaultValues() {
+            ASSERT(true == Test(2, 4.0));
+        }
+        bool Test(int i = 1, float f = 2.0) {
+            return (i == 2) && (f == 4.0);
+        }
+    

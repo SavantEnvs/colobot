@@ -1,0 +1,8 @@
+
+        extern void Duplicate_Default() {
+            switch(0) {
+                default:
+                default:
+            }
+        }
+        

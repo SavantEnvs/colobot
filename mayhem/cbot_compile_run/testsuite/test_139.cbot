@@ -1,0 +1,9 @@
+
+        bool Test(BaseClass b) {
+            SubClass s = b;
+            return (360 == s.a);
+        }
+        extern void UpcastPassingArguments() {
+            ASSERT(true == Test(new SubClass()));
+        }
+    
